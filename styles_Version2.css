@@ -163,3 +163,29 @@ footer {
     margin-right: 5px;
   }
 } 
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 80px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  background: rgba(198, 210, 190, 0.85);
+  display: inline-block;
+  padding: 10px 25px;
+  margin-bottom: 24px;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  background: rgba(0,0,0,0.45);
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 0 auto;
+  color: #fff;
+}
