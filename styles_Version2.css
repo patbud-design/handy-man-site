@@ -244,7 +244,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 400px;   /* You can make this bigger, like 450px, 500px, or even 60vh */
+  min-height: 450px;   /* You can make this bigger, like 450px, 500px, or even 60vh */
   display: flex;
   flex-direction: column;
   justify-content: center; /* This centers your text vertically */
