@@ -1,240 +1,242 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* Branding Colors */
-:root {
-  --primary-green: #385E3C;   /* light forest green (text, accents) */
-  --primary-brown: #A0824A;   /* light brown (backgrounds, highlights) */
-  --primary-red: #B73A3A;     /* brick red (accents) */
-  --secondary-grey: #7A7A7A;  /* soft grey */
-  --background-light: #F6F5F2;/* very light background */
-}
-
+/* General Styles */
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background: var(--background-light);
-  color: var(--primary-green);
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background: var(--primary-brown);
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(56, 94, 60, 0.08);
-}
-
-header img {
-  height: 52px;
-  margin-right: 1.5rem;
-}
-
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0;
-  color: var(--primary-green);
-  letter-spacing: 2px;
-}
-
-header span {
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-red);
-  margin-top: -6px;
-  letter-spacing: 3px;
-}
-
-nav {
-  margin-left: auto;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--primary-green);
-  font-weight: 600;
-  margin-left: 1.5rem;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--primary-red);
-}
-
-main {
-  padding: 2rem;
-  background: white;
-  max-width: 900px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(56, 94, 60, 0.08);
-}
-
-h2 {
-  color: var(--primary-green);
-  font-weight: 700;
-}
-
-button, .btn {
-  background: var(--primary-green);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 0.8rem 1.8rem;
-  font-size: 1rem;
-  font-family: inherit;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.2s;
-}
-
-button:hover, .btn:hover {
-  background: var(--primary-red);
-}
-
-footer {
-  padding: 1.5rem 0;
-  background: var(--secondary-grey);
-  color: #fff;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-/* Example card style for service sections */
-.card {
-  background: var(--primary-brown);
-  color: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 4px rgba(56, 94, 60, 0.05);
-}
-
-@media (max-width: 600px) {
-  main {
-    padding: 1rem;
-    margin: 1rem;
-  }
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-  nav {
-    margin-left: 0;
-    margin-top: 1rem;
-    width: 100%;
-  }
-}
+/* Top Bar */
 .top-bar {
-  background: #c6d2be;
-  color: #333;
+  background: #ffffff;
+  color: #4fc3f7;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 40px;
-  font-size: 1rem;
+  padding: 8px 24px;
+  font-size: 1em;
+  border-bottom: 1px solid #e0e0e0;
 }
-.social-icons img {
+
+.social-icons img,
+.social-icons svg {
+  width: 28px;
   height: 28px;
-  margin-right: 10px;
+  margin-right: 12px;
   vertical-align: middle;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
-.contact-info a, .contact-info span {
-  color: #333;
+.social-icons img:last-child,
+.social-icons svg:last-child {
+  margin-right: 0;
+}
+.social-icons img:hover,
+.social-icons svg:hover {
+  transform: scale(1.12);
+  filter: brightness(1.2);
+}
+
+.contact-info a {
+  color: #4fc3f7;
   text-decoration: none;
-  margin-left: 10px;
-  font-weight: 700;
+  margin-right: 4px;
 }
-@media (max-width: 700px) {
-  .top-bar {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 0.95rem;
-  }
-  .social-icons img {
-    height: 20px;
-    margin-right: 5px;
-  }
-} 
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  color: #222;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(79,195,247,0.07);
+}
+
+.branding h1 {
+  margin: 0;
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.branding .subtitle {
+  font-size: 1.2em;
+  color: #4fc3f7;
+  margin-top: 4px;
+}
+
+/* Navigation */
+.main-nav {
+  margin-top: 18px;
+}
+
+.main-nav a {
+  color: #4fc3f7;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 18px;
+  margin: 0 6px;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #e1f5fe;
+  color: #0288d1;
+}
+
+/* Hero Section */
 .hero {
+  background-color: #e1f5fe;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80');
   background-size: cover;
   background-position: center;
-  padding: 140px 0 80px 0;
-  color: #fff;
+  color: #222;
   text-align: center;
+  padding: 64px 20px 48px 20px;
   position: relative;
 }
+
 .hero h2 {
-  font-size: 2.5rem;
-  background: rgba(198, 210, 190, 0.85);
-  display: inline-block;
-  padding: 10px 25px;
-  margin-bottom: 24px;
-  color: #222;
-  font-family: 'poppins', sans-serif;
+  font-size: 2.4em;
   font-weight: 700;
-}
-.hero p {
-  font-size: 1.2rem;
-  background: rgba(0,0,0,0.45);
+  margin-bottom: 16px;
+  background: rgba(255,255,255,0.84);
   display: inline-block;
-  padding: 12px 18px;
-  margin: 0 auto;
-  color: #fff;
+  padding: 8px 24px;
+  border-radius: 8px;
 }
+
+.hero p {
+  font-size: 1.2em;
+  background: rgba(255,255,255,0.72);
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  margin-top: 0;
+}
+
+/* Services Section */
 .services {
-  margin: 3rem auto;
-  max-width: 1100px;
+  background: #fff;
+  padding: 48px 0 40px 0;
   text-align: center;
 }
+
+.services h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 22px;
+}
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 28px;
+  margin-top: 18px;
 }
+
 .service-card {
-  background: var(--primary-brown);
-  color: #fff;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(56,94,60,0.08);
-  width: 270px;
-  padding: 2rem 1.2rem 1.5rem 1.2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.service-card img {
-  height: 52px;
-  margin-bottom: 1rem;
-}
-.service-card h3 {
-  margin-top: 0.7rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.service-card p {
-  font-size: 1rem;
-  color: #f9e9d4;
+  box-shadow: 0 2px 8px rgba(79,195,247,0.04);
+  width: 210px;
+  padding: 24px 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: center;
 }
 .service-card:hover {
-  transform: translateY(-7px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(56,94,60,0.16);
+  box-shadow: 0 6px 18px rgba(79,195,247,0.12);
+  transform: translateY(-4px) scale(1.03);
 }
-@media (max-width: 800px) {
+
+.service-card img {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  color: #4fc3f7;
+  font-size: 1.18em;
+  font-weight: 700;
+  margin: 12px 0 8px 0;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 1em;
+  margin: 0;
+}
+
+/* Gallery Section (if you add it) */
+.gallery {
+  padding: 44px 0;
+  background: #f5fafe;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 24px;
+  font-size: 2em;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(79,195,247,0.09);
+  transition: transform 0.2s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(79,195,247,0.18);
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
   .services-list {
     flex-direction: column;
+    gap: 18px;
     align-items: center;
   }
+
   .service-card {
-    width: 95%;
-    margin-bottom: 1rem;
+    width: 92%;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 0 8px 0;
+  }
+  .hero {
+    padding: 32px 10px 18px 10px;
+  }
+  .services {
+    padding: 28px 0 24px 0;
+  }
+  .gallery {
+    padding: 20px 0;
   }
 }
