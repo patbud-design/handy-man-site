@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="16" fill="#FFF9E1"/>
+  <!-- Bulb base -->
+  <rect x="28" y="38" width="8" height="10" rx="4" fill="#FFD600"/>
+  <!-- Bulb glass -->
+  <ellipse cx="32" cy="32" rx="12" ry="14" fill="#FFF3B0" stroke="#FFD600" stroke-width="2"/>
+  <!-- Filament -->
+  <path d="M28 36c1.5-2 6.5-2 8 0" stroke="#FFA800" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bulb highlight -->
+  <ellipse cx="36" cy="28" rx="2" ry="4" fill="#FFF" fill-opacity=".6"/>
+</svg>
