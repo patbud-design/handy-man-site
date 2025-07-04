@@ -140,7 +140,76 @@
       </div>   
       </div>
       </section>
-      </main>
+      </main>      <h3>Garden & Outdoor Work</h3>
+      <p>From fencing to garden tidies, we do it all.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Popup Modal -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script>
+const serviceInfo = {
+  "Plumbing Repairs": {
+    title: "Plumbing Repairs",
+    desc: "Full plumbing service: leaks, pipe repairs, bathroom installations, tap replacements, emergency fixes, and more."
+  },
+  "Electrical Fixes": {
+    title: "Electrical Fixes",
+    desc: "Comprehensive electrical work: sockets, switches, light fittings, appliance installations, safety checks, and upgrades."
+  },
+  "Painting & Decorating": {
+    title: "Painting & Decorating",
+    desc: "Interior/exterior painting, wall prep, touch-ups, decorative finishes, and advice on colour schemes."
+  },
+  "Flat Pack Assembly": {
+    title: "Flat Pack Assembly",
+    desc: "Expert assembly of all flat pack furniture, secure fitting, and tidy work guaranteed."
+  },
+  "General Maintenance": {
+    title: "General Maintenance",
+    desc: "Odd jobs, repairs, shelf fitting, small fixes, and general property care."
+  },
+  "Garden & Outdoor Work": {
+    title: "Garden & Outdoor Work",
+    desc: "Garden tidies, fencing, lawn care, hedge trimming, landscaping, and outdoor maintenance."
+  }
+};
+
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const title = card.querySelector('h3').textContent.trim();
+    if(serviceInfo[title]) {
+      document.getElementById('modalTitle').textContent = serviceInfo[title].title;
+      document.getElementById('modalDesc').textContent = serviceInfo[title].desc;
+      document.getElementById('serviceModal').style.display = 'block';
+    }
+  });
+});
+
+// Close modal when clicking X or outside modal
+document.querySelector('.close-btn').onclick = function() {
+  document.getElementById('serviceModal').style.display = 'none';
+};
+window.onclick = function(event) {
+  if (event.target == document.getElementById('serviceModal')) {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+};
+</script>
+
+</body>
+</html>
+
+    
 
 </body>
 </html>
